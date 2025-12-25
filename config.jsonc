@@ -1,0 +1,54 @@
+  {
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+      "type": "file",
+      "source": "~/.config/fastfetch/logo.txt",
+      "color": {
+      "1": "blue",    // c1
+      "4": "34",      // c4: Furina Dark Blue
+      "6": "36",      // c6: Hydro Cyan
+      "7": "37"       // c7: White/Silver
+    },
+      "padding": {
+        "top": 2,
+        "right": 3,
+        "left": 2
+      }
+    },
+    "display": {
+      "separator": " 󰄾 ",
+      "key": {
+        "width": 12
+      }
+    },
+    "modules": [
+      "break",
+      "title",
+      { "type": "custom", "format": "────────────────────────────────────", "keyColor": "34" },
+
+      // SESI 1: SYSTEM CORE (BIRU)
+      { "type": "os",      "key": "  OS",     "keyColor": "34", "format": "{2}" },
+      { "type": "host",    "key": "󰌢  Host",   "keyColor": "34", "format": "{name}" },
+      { "type": "kernel",  "key": "󰒋  Ker",    "keyColor": "34", "format": "{2}" },
+      { "type": "shell",   "key": "󱆃  Sh",     "keyColor": "34", "format": "{1}" },
+      { "type": "terminal","key": "  Term",   "keyColor": "34", "format": "{2}" },
+
+      { "type": "custom", "format": "────────────────────────────────────", "keyColor": "36" },
+
+      // SESI 2: HARDWARE (CYAN)
+      { "type": "de",      "key": "󰧨  DE",     "keyColor": "36", "format": "{2}" },
+      { "type": "wm",      "key": "󱂬  WM",     "keyColor": "36", "format": "{2}" },
+      { "type": "cpu",     "key": "  CPU",    "keyColor": "36", "format": "Intel i7-1260P 12th Gen" },
+      { "type": "gpu",     "key": "󰢮  GPU",    "keyColor": "36", "format": "{2}" },
+      { "type": "memory",  "key": "  RAM",    "keyColor": "36", "format": "{1}" },
+
+      { "type": "custom", "format": "────────────────────────────────────", "keyColor": "30" },
+
+      // SESI 3: STATUS (GREY/POLAR NIGHT)
+      { "type": "disk",    "key": "󰋊  Disk",   "keyColor": "30", "folders": "/", "format": "{1}/{2}" },
+      { "type": "uptime",  "key": "󰅐  Up",     "keyColor": "30", "format": "{2}h {3}m" },
+      { "type": "battery", "key": "󰁹  Batt",   "keyColor": "30", "format": "{4}" },
+      
+      { "type": "custom", "format": "────────────────────────────────────", "keyColor": "30" }
+    ]
+  }
